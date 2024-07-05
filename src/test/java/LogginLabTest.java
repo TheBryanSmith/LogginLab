@@ -1,3 +1,6 @@
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,4 +34,14 @@ public class LogginLabTest {
             }
         }
     }
+@Test
+    public void thresholdReached(){
+
+        LogginLab logginLab = new LogginLab();
+        logginLab.setThreshold(10);
+        Boolean expected = true;
+    Assert.assertEquals(expected,logginLab.thresholdReached(10));
+}
+
+
 }
